@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: angularaksimage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angularaksimage
+  template:
+    metadata:
+      labels:
+        app: angularaksimage 
+    spec:
+      containers:
+        - name: angularaksimage 
+          image: acrangular.azurecr.io/angularaksimage
+          ports:
+          - containerPort: 80
