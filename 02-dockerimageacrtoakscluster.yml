@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'd980695c-8d12-4bd9-8c6a-ecdac08e15f0'
   imageRepository: 'angularaksimage'
-  containerRegistry: 'acrangular.azurecr.io'
+  containerRegistry: 'aksdevopsacrsvc.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'acrangular11481d58-auth'
