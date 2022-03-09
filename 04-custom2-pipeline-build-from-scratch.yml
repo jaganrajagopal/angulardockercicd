@@ -25,8 +25,8 @@ stages:
     # Task-1: Build Docker Image and push to Azure Container Registry ACR
     - task: Docker@2
       inputs:
-        containerRegistry: 'manual-aksdevopsacr-svc'
-        repository: 'custom2aksnginxapp1'
+        containerRegistry: 'angualaracr'
+        repository: 'app/angualaracr:v1'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
@@ -50,5 +50,5 @@ stages:
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'kube-manifests'
+        ArtifactName: 'angualararitifacts'
         publishLocation: 'Container'
